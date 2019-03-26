@@ -1,0 +1,22 @@
+Option Explicit
+
+Sub test()
+
+    Dim PalletCol As Range, FormulaCol As Range
+
+      With ThisWorkbook.Worksheets("Sheet1") '<- Change to fit your needs
+
+          Set PalletCol = .Range("K24:K39")
+          Set FormulaCol = .Range("L24:L39")
+
+          With PalletCol
+              .Formula = ""  '<- Import your formula. Depending on your formula you may need to use "FormulaR1C1"
+          End With
+
+          With FormulaCol
+              .Formula = ""  '<- Import your formula. Depending on your formula you may need to use "FormulaR1C1"
+          End With
+
+      End With
+
+End Sub
